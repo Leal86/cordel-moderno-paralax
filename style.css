@@ -16,11 +16,12 @@
     font-size: 1em;
 }
 
-html, body {
+html,
+body {
     min-height: 100vh;
-    background-color: darkgrey ;
+    background-color: darkgrey;
     font-family: var(--fonte1);
-    
+
 }
 
 header {
@@ -29,41 +30,42 @@ header {
     text-align: center;
 }
 
-header > h1 {
-    padding-top: 50px;
-    font-variant: small-caps; 
+header>h1 {
+    padding-top: 30px;
+    font-variant: small-caps;
     font-family: var(--fonte2);
     font-size: 10vw;
 }
 
-header > p {
+header>p {
     color: white;
     font-family: var(--fonte1);
-    padding-bottom: 50px;
-    
+    padding-bottom: 30px;
+
 }
 
-header a, footer a {
+header a,
+footer a {
     text-decoration: none;
     color: white;
     font-weight: bolder;
 }
 
-header a:hover, footer a:hover {
+header a:hover,
+footer a:hover {
     text-decoration: underline;
 }
 
 section {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+    padding: 5vh 0;
     line-height: 2em;
     padding-left: 30px;
     font-family: var(--fonte3);
     font-size: 3.5vw;
 }
 
-section > p {
-    padding-bottom: 2em;
+section>p {
+    padding-bottom: 1em;
 }
 
 section.normal {
@@ -71,7 +73,7 @@ section.normal {
     color: black;
 }
 
-section.imagem{
+section.imagem {
     background-color: rgb(58, 58, 58);
     color: white;
     box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.486);
@@ -79,10 +81,10 @@ section.imagem{
     background-attachment: fixed;
 }
 
-section.imagem > p {
+section.imagem>p {
     background-color: rgba(0, 0, 0, 0.664);
     display: inline-block;
-    padding: 5px;
+    padding: 8px;
     text-shadow: 1px 1px 0px black;
 }
 
@@ -99,6 +101,68 @@ footer {
     background-color: black;
     color: white;
     text-align: center;
-    padding-top: 1vw;
-    padding-bottom: 1vw;
+    padding: 5vh 0;
+}
+
+
+/***********************************************RESPONSIVE***********************************************/
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1024px) {
+    header>h1 {
+        padding-top: 25px;
+        font-size: 7vw;
+    }
+
+    header>p {
+        padding-bottom: 25px;
+    }
+
+    section {
+        padding: 7vh;
+        line-height: 2em;
+        padding-left: 30px;
+        font-family: var(--fonte3);
+        font-size: 3.5vw;
+    }
+
+    section>p {
+        margin-left: 20vh;
+        padding-bottom: 1em;
+    }
+
+    section.imagem>p {
+
+        padding: 15px;
+
+    }
+
+    footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 5vh;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    header>h1 {
+        padding-top: 25px;
+        font-size: 5vw;
+    }
+
+    header>p {
+        padding-bottom: 25px;
+    }
+
+    section {
+        padding: 4vh;
+        line-height: 2em;
+        padding-left: 20px;
+        font-size: 2vw;
+    }
+
+    section>p {
+        margin-left: 55vh;
 }
